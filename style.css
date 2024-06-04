@@ -1,0 +1,111 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family:  sans-serif;
+}
+
+body{
+    width:100%;
+    height:100vh;
+    background-color: #A9CBB7
+    /*background-image: linear-gradient(135deg, blue, red); */
+}
+
+.container{
+    width:400px;
+    min-height:100px;
+    margin:2rem auto;
+    background-color: white;
+    border-radius: 10px;
+    padding:20px;
+}
+
+.to-do{
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #003F91;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.input-container{
+    margin-top: 15px;
+    height:2.5rem;
+    width:100%;
+    background-color: rgb(230, 227, 227);
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input-container input{    
+    height:100%;
+    border:none;
+    outline: none;
+    background-color: transparent;
+    margin-left: 15px;
+    flex:1;
+}
+
+.input-container button{
+    height:100%;
+    width:20%;
+    border:none;
+    background-color: orangered;
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+}
+
+
+.task-container {
+    width:100%;
+    height: 100%;
+    padding-left:2rem;
+    margin-top: 15px;
+    list-style:none;
+}
+
+.task-container li{
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.task-container li:hover{
+    cursor: pointer;
+}
+
+.task-container li span{
+    width:20px;
+    height:20px;
+    right:8px;
+    position: absolute;
+    color:red;
+}
+
+.task-container li::before{
+    content: '';
+    height:20px;
+    width:20px;
+    background-image: url("img/holo-circle.png");
+    background-size: cover;
+    background-position: center ;
+    border-radius: 50%;
+    position:absolute;
+    left:-28px;
+}
+
+.task-container li.check{
+    text-decoration: line-through;
+}
+
+
+.task-container li.check::before{
+    background-image: url("img/checked.png");
+    background-size: cover;
+    background-position: center ;
+    border-radius: 50%;
+}
